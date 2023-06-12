@@ -9,7 +9,7 @@
 		"jest-check": "jest --verbose --runInBand --detectOpenHandles --config jest.config.ts",
 		"dev": "webpack --watch --config ./webpack.config.ts --mode development",
 		"build": "webpack --config ./webpack.config.ts --mode production",
-		"start": "node ./dist/app.js",
+		"start": "node -e \"require('./dist/app.js').app()\"",
 		"everything": "npm run prettier-check && npm run eslint-check && npm run tsc-check && npm run jest-check && npm run build && npm run start"
 	},
 	"dependencies": {
